@@ -3,13 +3,11 @@ FROM ubuntu:latest
 WORKDIR /app
 
 RUN apt-get update && \
-    apt-get install -y python3
-RUN apt-get install -y python3-pymysql
-RUN apt-get install -y python3-flask
-RUN apt-get install -y python-boto3
+    apt-get install -y python3 python3-pip
 
+RUN pip3 install pymysql flask boto3
 
-copy . .
+COPY . .
 
 EXPOSE 80
 
