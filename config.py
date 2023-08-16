@@ -9,7 +9,7 @@ secret_dict=json.loads(response['SecretString'])
 customhost = secret_dict['host']
 customuser = secret_dict['username']
 custompass = secret_dict['password']
-customdb = secret_dict['dbInstanceIdentifier']
+customdb = "employee"
 customregion = "ap-south-1"
 print("customhost",secret_dict['host'])
 print("customuser",secret_dict['username'])
