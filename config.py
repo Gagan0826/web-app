@@ -6,6 +6,7 @@ client=boto3.client("secretsmanager", region_name=region_name)
 response=client.get_secret_value(SecretId="employee-db-secret")
 secret_dict=json.loads(response['SecretString'])
 
+
 customhost = secret_dict['host']
 customuser = secret_dict['username']
 custompass = secret_dict['password']
