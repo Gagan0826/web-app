@@ -1,9 +1,9 @@
 import boto3
 import json
-secret_name = "week-1-rds"
+secret_name = "employee-db-secret"
 region_name = "ap-south-1"
 client=boto3.client("secretsmanager", region_name=region_name)
-response=client.get_secret_value(SecretId="week-1-rds")
+response=client.get_secret_value(SecretId="employee-db-secret")
 secret_dict=json.loads(response['SecretString'])
 
 customhost = secret_dict['host']
