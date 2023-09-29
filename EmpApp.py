@@ -3,6 +3,7 @@ from pymysql import connections
 from config import *
 app = Flask(__name__)
 
+
 db_conn = connections.Connection(
     host=customhost,
     port=3306,
